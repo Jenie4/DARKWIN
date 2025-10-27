@@ -1,0 +1,129 @@
+* {
+      margin: 0;
+        padding: 0;
+          box-sizing: border-box;
+            font-family: "Times New Roman", Times, serif;
+            }
+
+            body {
+              background-color: white;
+                color: black;
+                }
+
+                /* ===== MENÚ DE ESCRITORIO ===== */
+                .sidebar {
+                  position: fixed;
+                    right: 0;
+                      top: 0;
+                        height: 100vh;
+                          width: 220px;
+                            background-color: #f7f7f7;
+                              border-left: 1px solid #ddd;
+                                padding: 30px 20px;
+                                  text-align: center;
+                                  }
+
+                                  .sidebar h2 {
+                                    font-size: 20px;
+                                      margin-bottom: 30px;
+                                      }
+
+                                      .sidebar ul {
+                                        list-style: none;
+                                        }
+
+                                        .sidebar li {
+                                          margin: 20px 0;
+                                          }
+
+                                          .sidebar a {
+                                            text-decoration: none;
+                                              color: black;
+                                                transition: color 0.3s ease;
+                                                }
+
+                                                .sidebar a:hover {
+                                                  color: gray;
+                                                  }
+
+                                                  /* ===== CONTENIDO PRINCIPAL ===== */
+                                                  .main-content {
+                                                    padding: 40px;
+                                                      margin-right: 240px; /* espacio para el menú */
+                                                      }
+
+                                                      .section {
+                                                        margin-bottom: 80px;
+                                                        }
+
+                                                        .section h1, .section h2 {
+                                                          margin-bottom: 20px;
+                                                          }
+
+                                                          .gallery {
+                                                            display: grid;
+                                                              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                                                                gap: 20px;
+                                                                }
+
+                                                                .photo {
+                                                                  border: 1px solid #ccc;
+                                                                    padding: 80px;
+                                                                      text-align: center;
+                                                                        font-style: italic;
+                                                                          color: #555;
+                                                                          }
+
+                                                                          /* ===== CABECERA MÓVIL ===== */
+                                                                          .mobile-header {
+                                                                            display: none;
+                                                                              background-color: #f7f7f7;
+                                                                                padding: 15px 20px;
+                                                                                  border-bottom: 1px solid #ddd;
+                                                                                    align-items: center;
+                                                                                      justify-content: space-between;
+                                                                                      }
+
+                                                                                      .mobile-header h1 {
+                                                                                        font-size: 18px;
+                                                                                        }
+
+                                                                                        .menu-btn {
+                                                                                          font-size: 24px;
+                                                                                            background: none;
+                                                                                              border: none;
+                                                                                                cursor: pointer;
+                                                                                                }
+
+                                                                                                /* ===== MODO RESPONSIVE ===== */
+                                                                                                @media (max-width: 768px) {
+                                                                                                  .sidebar {
+                                                                                                      display: none;
+                                                                                                          position: fixed;
+                                                                                                              right: 0;
+                                                                                                                  top: 0;
+                                                                                                                      width: 180px;
+                                                                                                                          height: 100vh;
+                                                                                                                              background-color: #f7f7f7;
+                                                                                                                                  border-left: 1px solid #ccc;
+                                                                                                                                      text-align: center;
+                                                                                                                                          padding-top: 60px;
+                                                                                                                                            }
+
+                                                                                                                                              .sidebar.active {
+                                                                                                                                                  display: block;
+                                                                                                                                                    }
+
+                                                                                                                                                      .mobile-header {
+                                                                                                                                                          display: flex;
+                                                                                                                                                              position: sticky;
+                                                                                                                                                                  top: 0;
+                                                                                                                                                                      z-index: 10;
+                                                                                                                                                                        }
+
+                                                                                                                                                                          .main-content {
+                                                                                                                                                                              margin-right: 0;
+                                                                                                                                                                                  padding: 20px;
+                                                                                                                                                                                    }
+                                                                                                                                                                                    }
+}
